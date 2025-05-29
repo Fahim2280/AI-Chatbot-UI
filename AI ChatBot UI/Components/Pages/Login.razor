@@ -1,0 +1,80 @@
+﻿@page "/login"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@using System.Net.Http.Headers
+@using System.Text.Json
+@using System.Text
+@using AI_ChatBot_UI.DTOs
+@using Blazored.LocalStorage
+@rendermode InteractiveServer
+@inject ILocalStorageService localStorage
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+
+
+
+<h3 class="text-2xl font-bold mb-4">Login</h3>
+
+@if (!string.IsNullOrEmpty(Error))
+{
+    <div class="text-red-500">@Error</div>
+}
+
+<div class="w-full max-w-md mx-auto p-4 bg-white shadow-xl rounded-xl">
+    <div class="mb-4">
+        <label>Email</label>
+        <input @bind="LoginModel.Email" class="input input-bordered w-full" />
+    </div>
+    <div class="mb-4">
+        <label>Password</label>
+        <input @bind="LoginModel.Password" type="password" class="input input-bordered w-full" />
+    </div>
+    <button @onclick="HandleLogin" type="button" class="btn btn-primary w-full">Login</button>
+</div>
+
+@code {
+    private LoginDto LoginModel = new();
+    private string? Error;
+
+    private bool _isInitialized = false;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && !_isInitialized)
+        {
+            _isInitialized = true;
+
+            var token = await LocalStorage.GetItemAsync<string>("authToken");
+            if (!string.IsNullOrWhiteSpace(token))
+            {
+                Http.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+            }
+
+            StateHasChanged(); // optionally force a re-render if needed
+        }
+    }
+
+    private async Task HandleLogin()
+    {
+        var content = new StringContent(JsonSerializer.Serialize(LoginModel), Encoding.UTF8, "application/json");
+        var response = await Http.PostAsync("api/auth/login", content);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var json = await response.Content.ReadAsStringAsync();
+            var token = JsonDocument.Parse(json).RootElement.GetProperty("token").GetString();
+
+            // ✅ Save token in local storage
+            await localStorage.SetItemAsync("authToken", token);
+
+            // ✅ Optionally update HttpClient headers
+            Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            Navigation.NavigateTo("/");
+        }
+        else
+        {
+            Error = "Invalid login credentials.";
+        }
+    }
+ 
+}

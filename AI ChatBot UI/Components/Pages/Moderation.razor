@@ -1,0 +1,103 @@
+﻿@page "/moderation"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@using System.Net.Http.Json
+
+<h3 class="text-2xl font-bold mb-4">Moderate Messages</h3>
+
+@if (Messages == null)
+{
+    <p>Loading messages...</p>
+}
+else if (!Messages.Any())
+{
+    <p>No messages found.</p>
+}
+else
+{
+    <div class="space-y-4 max-w-3xl mx-auto">
+        @foreach (var message in Messages)
+        {
+            <div class="p-4 shadow rounded border @(message.IsDeleted ? "bg-red-100" : "bg-white")">
+                <div class="text-sm text-gray-600">@message.Timestamp.ToLocalTime() • <strong>@message.Sender</strong></div>
+                <textarea class="w-full border p-2 mt-2" @bind="message.Message"></textarea>
+                <div class="flex gap-2 mt-2">
+                    <button class="btn btn-sm btn-primary" @onclick="() => SaveEdit(message)">Save</button>
+                    <button class="btn btn-sm btn-warning" @onclick="() => Approve(message)">@((message.IsApproved ? "Unapprove" : "Approve"))</button>
+                    <button class="btn btn-sm btn-error" @onclick="() => Delete(message)">Delete</button>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<ChatMessageModel>? Messages;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Messages = await Http.GetFromJsonAsync<List<ChatMessageModel>>("https://localhost:7131/api/chat/history?sessionId=test-session");
+    }
+
+    private async Task SaveEdit(ChatMessageModel message)
+    {
+        var dto = new EditMessageDto { Message = message.Message };
+        var response = await Http.PutAsJsonAsync($"https://localhost:7131/api/chat/{message.Id}", dto);
+
+        if (!response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Edit failed.");
+        }
+    }
+
+    private async Task Approve(ChatMessageModel message)
+    {
+        var dto = new ApproveMessageDto { IsApproved = !message.IsApproved };
+        var request = new HttpRequestMessage(HttpMethod.Patch, $"https://localhost:7131/api/chat/{message.Id}/approve")
+            {
+                Content = JsonContent.Create(dto)
+            };
+        var response = await Http.SendAsync(request);
+        if (response.IsSuccessStatusCode)
+        {
+            message.IsApproved = dto.IsApproved;
+        }
+        else
+        {
+            Console.WriteLine("Approval failed.");
+        }
+    }
+
+    private async Task Delete(ChatMessageModel message)
+    {
+        var response = await Http.DeleteAsync($"https://localhost:7131/api/chat/{message.Id}");
+        if (response.IsSuccessStatusCode)
+        {
+            message.IsDeleted = true;
+        }
+        else
+        {
+            Console.WriteLine("Delete failed.");
+        }
+    }
+
+    public class ChatMessageModel
+    {
+        public int Id { get; set; }
+        public string Sender { get; set; } = "";
+        public string Message { get; set; } = "";
+        public bool IsApproved { get; set; }
+        public bool IsDeleted { get; set; }
+        public DateTime Timestamp { get; set; }
+    }
+
+    public class EditMessageDto
+    {
+        public string Message { get; set; } = string.Empty;
+    }
+
+    public class ApproveMessageDto
+    {
+        public bool IsApproved { get; set; }
+    }
+}

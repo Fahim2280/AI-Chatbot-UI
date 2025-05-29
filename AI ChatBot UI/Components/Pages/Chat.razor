@@ -1,0 +1,113 @@
+﻿@page "/chat"
+@using System.Net.Http.Headers
+@using System.Text.Json
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@rendermode InteractiveServer
+@using AI_ChatBot_UI.DTOs
+
+<h3 class="text-3xl font-bold mb-4">AI Chatbot</h3>
+
+<div class="chat-box max-w-2xl mx-auto bg-white shadow-md rounded-xl p-4">
+    <div class="overflow-y-auto max-h-[500px] mb-4">
+        @foreach (var message in Messages)
+        {
+            <div class="mb-2">
+                <div class="@(message.Sender == "Bot" ? "text-left text-blue-700" : "text-right text-green-700")">
+                    <strong>@message.Sender:</strong> @message.Message
+                    <div class="text-xs text-gray-500">@message.Timestamp.ToLocalTime().ToString("g")</div>
+                </div>
+            </div>
+        }
+        @if (IsTyping)
+        {
+            <div class="text-blue-500 italic">Bot is typing...</div>
+        }
+    </div>
+
+    <div class="flex gap-2">
+        <input @bind="NewMessage" class="input input-bordered w-full" placeholder="Type your message..." />
+        <button @onclick="SendMessage" class="btn btn-primary">Send</button>
+    </div>
+</div>
+
+@code {
+    private string NewMessage = string.Empty;
+    private string SessionId = Guid.NewGuid().ToString();
+    private List<ChatMessage> Messages = new();
+    private bool IsTyping = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadChatHistory();
+    }
+
+    private async Task LoadChatHistory()
+    {
+        try
+        {
+            var response = await Http.GetAsync($"https://localhost:7131/api/chat/history?sessionId={SessionId}");
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                var history = JsonSerializer.Deserialize<List<ChatMessage>>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                if (history != null)
+                    Messages = history.OrderBy(m => m.Timestamp).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error loading history: " + ex.Message);
+        }
+    }
+
+    private async Task SendMessage()
+    {
+        if (string.IsNullOrWhiteSpace(NewMessage)) return;
+
+        var userMessage = new ChatMessage
+            {
+                Sender = "User",
+                Message = NewMessage,
+                Timestamp = DateTime.UtcNow
+            };
+        Messages.Add(userMessage);
+        IsTyping = true;
+
+        var dto = new ChatMessageDto { Message = NewMessage, SessionId = SessionId };
+        NewMessage = string.Empty;
+
+        try
+        {
+            var content = new StringContent(JsonSerializer.Serialize(dto), System.Text.Encoding.UTF8, "application/json");
+            var response = await Http.PostAsync("https://localhost:7131/api/chat/send", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                var botResponse = JsonSerializer.Deserialize<ChatResponseDto>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                if (botResponse != null)
+                {
+                    Messages.Add(new ChatMessage
+                        {
+                            Sender = "Bot",
+                            Message = botResponse.Message,
+                            Timestamp = botResponse.Timestamp
+                        });
+                }
+            }
+            else
+            {
+                Messages.Add(new ChatMessage { Sender = "System", Message = "Failed to contact AI." });
+            }
+        }
+        catch (Exception ex)
+        {
+            Messages.Add(new ChatMessage { Sender = "System", Message = "Error: " + ex.Message });
+        }
+        finally
+        {
+            IsTyping = false;
+        }
+    }
+}

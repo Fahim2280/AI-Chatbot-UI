@@ -1,0 +1,38 @@
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\bin\Debug\net8.0\appsettings.Development.json
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\bin\Debug\net8.0\appsettings.json
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\bin\Debug\net8.0\AI_ChatBot_UI.staticwebassets.runtime.json
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\bin\Debug\net8.0\AI_ChatBot_UI.staticwebassets.endpoints.json
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\bin\Debug\net8.0\AI_ChatBot_UI.exe
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\bin\Debug\net8.0\AI_ChatBot_UI.deps.json
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\bin\Debug\net8.0\AI_ChatBot_UI.runtimeconfig.json
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\bin\Debug\net8.0\AI_ChatBot_UI.dll
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\bin\Debug\net8.0\AI_ChatBot_UI.pdb
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\AI ChatBot UI.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\AI ChatBot UI.AssemblyInfoInputs.cache
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\AI ChatBot UI.AssemblyInfo.cs
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\AI ChatBot UI.csproj.CoreCompileInputs.cache
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\AI_ChatBot_UI.MvcApplicationPartsAssemblyInfo.cache
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\AI ChatBot UI.sourcelink.json
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\scopedcss\bundle\AI_ChatBot_UI.styles.css
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\scopedcss\projectbundle\AI_ChatBot_UI.bundle.scp.css
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\staticwebassets.build.json
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\staticwebassets.development.json
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\staticwebassets\msbuild.AI_ChatBot_UI.Microsoft.AspNetCore.StaticWebAssets.props
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\staticwebassets\msbuild.AI_ChatBot_UI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\staticwebassets\msbuild.build.AI_ChatBot_UI.props
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AI_ChatBot_UI.props
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AI_ChatBot_UI.props
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\staticwebassets.pack.json
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\AI_ChatBot_UI.dll
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\refint\AI_ChatBot_UI.dll
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\AI_ChatBot_UI.pdb
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\AI ChatBot UI.genruntimeconfig.cache
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\ref\AI_ChatBot_UI.dll
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\AI ChatBot UI.csproj.AssemblyReference.cache
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\obj\Debug\net8.0\AI ChatB.9A36F234.Up2Date
+D:\GitHub\AI-Chatbot-UI\AI ChatBot UI\bin\Debug\net8.0\Blazored.LocalStorage.dll
