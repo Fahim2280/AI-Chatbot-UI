@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HSVjXrhsP86Qw7R1HhHL4nZ+n+vAfjRVrc7rGLOCpxY=",
+  "Hash": "/tn9H/dfAC/I0ddeX2oZseNOUAh+9/2WZoraK7oRbQM=",
   "Source": "AI_ChatBot_UI",
   "BasePath": "_content/AI_ChatBot_UI",
   "Mode": "Default",
@@ -122,6 +122,90 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Identity": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\chat.css",
+      "SourceId": "AI_ChatBot_UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\",
+      "BasePath": "_content/AI_ChatBot_UI",
+      "RelativePath": "css/chat#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xbpgehygsh",
+      "Integrity": "w0mU11EzJ3GdRJvP9tJOzTefhl/Q8lPPJBK9+cuVVTw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\chat.css"
+    },
+    {
+      "Identity": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\Login.css",
+      "SourceId": "AI_ChatBot_UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\",
+      "BasePath": "_content/AI_ChatBot_UI",
+      "RelativePath": "css/Login#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rmdnbycqpb",
+      "Integrity": "PWhfKJysgPbTHCHoSbd3ZszNsvhX6c8PUt8QiEMf4k8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Login.css"
+    },
+    {
+      "Identity": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\register.css",
+      "SourceId": "AI_ChatBot_UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\",
+      "BasePath": "_content/AI_ChatBot_UI",
+      "RelativePath": "css/register#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tqjvsuglsb",
+      "Integrity": "S3Y4Gp9Tk1X22OWAWD+cx9UGWk2CM5oehOBosOdxq64=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\register.css"
+    },
+    {
+      "Identity": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\site.css",
+      "SourceId": "AI_ChatBot_UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\",
+      "BasePath": "_content/AI_ChatBot_UI",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k9ipjrhj82",
+      "Integrity": "SMiox1DgisSiuBAKtmF1CI7caBwLk5eHbsY7WkP3Znc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
       "Identity": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\favicon.png",
       "SourceId": "AI_ChatBot_UI",
       "SourceType": "Discovered",
@@ -141,6 +225,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\js\\site.js",
+      "SourceId": "AI_ChatBot_UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\",
+      "BasePath": "_content/AI_ChatBot_UI",
+      "RelativePath": "js/site#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mgfrb8e7fq",
+      "Integrity": "+s1/7tZOz0nbo+gU6Dk3Ox7tK+gstgsAPUXCj7oGefI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
     }
   ],
   "Endpoints": [
@@ -555,6 +660,334 @@
       ]
     },
     {
+      "Route": "css/chat.css",
+      "AssetFile": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\chat.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2059"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"w0mU11EzJ3GdRJvP9tJOzTefhl/Q8lPPJBK9+cuVVTw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 19:55:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-w0mU11EzJ3GdRJvP9tJOzTefhl/Q8lPPJBK9+cuVVTw="
+        }
+      ]
+    },
+    {
+      "Route": "css/chat.xbpgehygsh.css",
+      "AssetFile": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\chat.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2059"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"w0mU11EzJ3GdRJvP9tJOzTefhl/Q8lPPJBK9+cuVVTw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 19:55:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xbpgehygsh"
+        },
+        {
+          "Name": "label",
+          "Value": "css/chat.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-w0mU11EzJ3GdRJvP9tJOzTefhl/Q8lPPJBK9+cuVVTw="
+        }
+      ]
+    },
+    {
+      "Route": "css/Login.css",
+      "AssetFile": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\Login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1341"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PWhfKJysgPbTHCHoSbd3ZszNsvhX6c8PUt8QiEMf4k8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 19:32:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PWhfKJysgPbTHCHoSbd3ZszNsvhX6c8PUt8QiEMf4k8="
+        }
+      ]
+    },
+    {
+      "Route": "css/Login.rmdnbycqpb.css",
+      "AssetFile": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\Login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1341"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PWhfKJysgPbTHCHoSbd3ZszNsvhX6c8PUt8QiEMf4k8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 19:32:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rmdnbycqpb"
+        },
+        {
+          "Name": "label",
+          "Value": "css/Login.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PWhfKJysgPbTHCHoSbd3ZszNsvhX6c8PUt8QiEMf4k8="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.css",
+      "AssetFile": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\register.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1467"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"S3Y4Gp9Tk1X22OWAWD+cx9UGWk2CM5oehOBosOdxq64=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 19:45:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-S3Y4Gp9Tk1X22OWAWD+cx9UGWk2CM5oehOBosOdxq64="
+        }
+      ]
+    },
+    {
+      "Route": "css/register.tqjvsuglsb.css",
+      "AssetFile": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\register.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1467"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"S3Y4Gp9Tk1X22OWAWD+cx9UGWk2CM5oehOBosOdxq64=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 19:45:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tqjvsuglsb"
+        },
+        {
+          "Name": "label",
+          "Value": "css/register.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-S3Y4Gp9Tk1X22OWAWD+cx9UGWk2CM5oehOBosOdxq64="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2116"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SMiox1DgisSiuBAKtmF1CI7caBwLk5eHbsY7WkP3Znc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 19:25:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SMiox1DgisSiuBAKtmF1CI7caBwLk5eHbsY7WkP3Znc="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.k9ipjrhj82.css",
+      "AssetFile": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2116"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SMiox1DgisSiuBAKtmF1CI7caBwLk5eHbsY7WkP3Znc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 19:25:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k9ipjrhj82"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SMiox1DgisSiuBAKtmF1CI7caBwLk5eHbsY7WkP3Znc="
+        }
+      ]
+    },
+    {
       "Route": "favicon.ifv42okdf2.png",
       "AssetFile": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\favicon.png",
       "Selectors": [],
@@ -633,6 +1066,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+s1/7tZOz0nbo+gU6Dk3Ox7tK+gstgsAPUXCj7oGefI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 20:09:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+s1/7tZOz0nbo+gU6Dk3Ox7tK+gstgsAPUXCj7oGefI="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.mgfrb8e7fq.js",
+      "AssetFile": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+s1/7tZOz0nbo+gU6Dk3Ox7tK+gstgsAPUXCj7oGefI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 20:09:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mgfrb8e7fq"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+s1/7tZOz0nbo+gU6Dk3Ox7tK+gstgsAPUXCj7oGefI="
         }
       ]
     }

@@ -17,8 +17,28 @@
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Id": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
+      "Id": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\chat.css",
+      "PackagePath": "staticwebassets\\css\\chat.css"
+    },
+    {
+      "Id": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\register.css",
+      "PackagePath": "staticwebassets\\css\\register.css"
+    },
+    {
+      "Id": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
       "Id": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AI_ChatBot_UI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

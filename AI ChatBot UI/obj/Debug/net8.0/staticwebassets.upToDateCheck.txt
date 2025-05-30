@@ -1,4 +1,9 @@
 wwwroot\app.css
 wwwroot\bootstrap\bootstrap.min.css
 wwwroot\bootstrap\bootstrap.min.css.map
+wwwroot\css\chat.css
+wwwroot\css\Login.css
+wwwroot\css\register.css
+wwwroot\css\site.css
 wwwroot\favicon.png
+wwwroot\js\site.js

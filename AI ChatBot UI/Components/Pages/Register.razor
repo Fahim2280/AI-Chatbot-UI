@@ -7,29 +7,47 @@
 @rendermode InteractiveServer
 
 
-<h3 class="text-2xl font-bold mb-4">Register</h3>
+<link href="css/register.css" rel="stylesheet" />
+
+<h3 class="form-title">Register</h3>
 
 @if (!string.IsNullOrEmpty(Error))
 {
     <div class="text-red-500">@Error</div>
 }
 
-<div class="w-full max-w-md mx-auto p-4 bg-white shadow-xl rounded-xl">
-    <div class="mb-4">
-        <label>Username</label>
-        <input @bind="RegisterModel.Username" class="input input-bordered w-full" />
+<EditForm Model="@RegisterModel" OnValidSubmit="HandleRegister">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-wrapper">
+        <div class="form-group">
+            <label>Username</label>
+            <InputText @bind-Value="RegisterModel.Username" class="input" />
+            <ValidationMessage For="@(() => RegisterModel.Username)" />
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <InputText @bind-Value="RegisterModel.Email" class="input" />
+            <ValidationMessage For="@(() => RegisterModel.Email)" />
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <InputText @bind-Value="RegisterModel.Password" type="password" class="input" />
+            <ValidationMessage For="@(() => RegisterModel.Password)" />
+        </div>
+
+        <button type="submit" class="btn">Register</button>
     </div>
-    <div class="mb-4">
-        <label>Email</label>
-        <input @bind="RegisterModel.Email" class="input input-bordered w-full" />
+
+    <div>
+        <a href="/login" class="text-blue-500 hover:underline">Already have an account? Login</a>
+
     </div>
-    <div class="mb-4">
-        <label>Password</label>
-        <input @bind="RegisterModel.Password" type="password" class="input input-bordered w-full" />
-    </div>
-    <button @onclick="HandleRegister" type="button" class="btn btn-success w-full">Register</button>
-</div>
-<p role="status">Current count: @currentCount</p>
+</EditForm>
+
 
 
 

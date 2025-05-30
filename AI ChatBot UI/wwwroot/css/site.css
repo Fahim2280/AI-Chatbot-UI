@@ -1,0 +1,114 @@
+﻿/* Base Layout */
+.page {
+    display: flex;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding-top: 1rem;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.nav-scrollable {
+    margin-top: 1rem;
+}
+
+    .nav-scrollable nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+.nav-item {
+    margin-bottom: 1rem;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-weight: 500;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    border-radius: 4px;
+}
+
+    .nav-link:hover,
+    .nav-link.active {
+        background-color: #34495e;
+        color: #ffffff;
+    }
+
+/* Main Content */
+main {
+    margin-left: 250px;
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+/* Top Navigation Bar */
+.top-row {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+    .top-row a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: 500;
+    }
+
+        .top-row a:hover {
+            text-decoration: underline;
+        }
+
+/* Top Navbar Branding */
+.navbar {
+    background-color: #343a40;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+}
+
+/* Blazor Error UI */
+#blazor-error-ui {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+    #blazor-error-ui .reload,
+    #blazor-error-ui .dismiss {
+        margin-left: 1rem;
+        cursor: pointer;
+        text-decoration: underline;
+        color: #0056b3;
+    }

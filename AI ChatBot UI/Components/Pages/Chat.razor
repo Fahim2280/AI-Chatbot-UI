@@ -5,31 +5,67 @@
 @inject NavigationManager Navigation
 @rendermode InteractiveServer
 @using AI_ChatBot_UI.DTOs
+@using Blazored.LocalStorage
+@inject ILocalStorageService localStorage
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+@inject IJSRuntime JS
+
+
+<link href="css/chat.css" rel="stylesheet" />
+<script src="js/site.js"></script>
 
 <h3 class="text-3xl font-bold mb-4">AI Chatbot</h3>
 
-<div class="chat-box max-w-2xl mx-auto bg-white shadow-md rounded-xl p-4">
-    <div class="overflow-y-auto max-h-[500px] mb-4">
+<div class="chat-box">
+    <div id="chatMessages" class="messages-container">
         @foreach (var message in Messages)
         {
-            <div class="mb-2">
-                <div class="@(message.Sender == "Bot" ? "text-left text-blue-700" : "text-right text-green-700")">
-                    <strong>@message.Sender:</strong> @message.Message
-                    <div class="text-xs text-gray-500">@message.Timestamp.ToLocalTime().ToString("g")</div>
-                </div>
+            <div class="message @(message.Sender == "Bot" ? "bot" : "user")">
+                <strong>@message.Sender:</strong>
+                <textarea class="w-full border p-2"
+                          @bind="message.Message"
+                          disabled="@(message.Sender == "Bot" || !message.IsEditing)">
+                </textarea>
+                <div class="timestamp">@message.Timestamp.ToLocalTime().ToString("g")</div>
+
+                @if (message.Sender != "Bot")
+                {
+                    <div class="button-group">
+                        @if (!message.IsEditing)
+                        {
+                            <button class="btn btn-primary" @onclick="() => EnableEdit(message)">Edit</button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-success" @onclick="() => SaveEdit(message)">Save</button>
+                            <button class="btn btn-secondary" @onclick="() => CancelEdit(message)">Cancel</button>
+                        }
+
+                        <button class="btn btn-warning" @onclick="() => ToggleApproval(message)">
+                            @((message.IsApproved ? "Unapprove" : "Approve"))
+                        </button>
+                        <button class="btn btn-error" @onclick="() => DeleteMessage(message)">Delete</button>
+                    </div>
+                }
             </div>
         }
+
         @if (IsTyping)
         {
-            <div class="text-blue-500 italic">Bot is typing...</div>
+            <div class="typing-indicator">Bot is typing...</div>
         }
     </div>
 
-    <div class="flex gap-2">
-        <input @bind="NewMessage" class="input input-bordered w-full" placeholder="Type your message..." />
+    <div class="input-area">
+        <input @bind="NewMessage" placeholder="Type your message..." />
         <button @onclick="SendMessage" class="btn btn-primary">Send</button>
     </div>
 </div>
+
+
+
+
+
 
 @code {
     private string NewMessage = string.Empty;
@@ -53,6 +89,10 @@
                 var history = JsonSerializer.Deserialize<List<ChatMessage>>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
                 if (history != null)
                     Messages = history.OrderBy(m => m.Timestamp).ToList();
+                foreach (var msg in Messages)
+                {
+                    Console.WriteLine($"Message ID: {msg.Id}, Sender: {msg.Sender}, Message: {msg.Message.Substring(0, Math.Min(50, msg.Message.Length))}...");
+                }
             }
         }
         catch (Exception ex)
@@ -65,17 +105,10 @@
     {
         if (string.IsNullOrWhiteSpace(NewMessage)) return;
 
-        var userMessage = new ChatMessage
-            {
-                Sender = "User",
-                Message = NewMessage,
-                Timestamp = DateTime.UtcNow
-            };
-        Messages.Add(userMessage);
-        IsTyping = true;
-
+        var originalMessage = NewMessage;
         var dto = new ChatMessageDto { Message = NewMessage, SessionId = SessionId };
         NewMessage = string.Empty;
+        IsTyping = true;
 
         try
         {
@@ -86,14 +119,29 @@
             {
                 var json = await response.Content.ReadAsStringAsync();
                 var botResponse = JsonSerializer.Deserialize<ChatResponseDto>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
                 if (botResponse != null)
                 {
-                    Messages.Add(new ChatMessage
+                    // Add user message with the ID from backend
+                    var userMessage = new ChatMessage
                         {
+                            Id = botResponse.UserId, // Use the ID from backend
+                            Sender = "User",
+                            Message = originalMessage,
+                            Timestamp = DateTime.UtcNow
+                        };
+                    Messages.Add(userMessage);
+
+                    // Add bot message with its ID
+                    var botMessage = new ChatMessage
+                        {
+                            Id = botResponse.Id,
                             Sender = "Bot",
                             Message = botResponse.Message,
-                            Timestamp = botResponse.Timestamp
-                        });
+                            Timestamp = botResponse.Timestamp,
+                            IsApproved = botResponse.IsApproved
+                        };
+                    Messages.Add(botMessage);
                 }
             }
             else
@@ -108,6 +156,139 @@
         finally
         {
             IsTyping = false;
+            StateHasChanged();
         }
+    }
+
+    private async Task EditMessage(ChatMessage message)
+    {
+        if (message.Id <= 0)
+        {
+            Console.WriteLine("Invalid message ID for editing");
+            return;
+        }
+
+        try
+        {
+            Console.WriteLine($"Editing message ID: {message.Id}");
+            var token = await localStorage.GetItemAsync<string>("authToken");
+            Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+           
+
+            var dto = new EditMessageDto { Message = message.Message };
+            //var content = new StringContent(JsonSerializer.Serialize(dto), System.Text.Encoding.UTF8, "application/json");
+            var response = await Http.PutAsJsonAsync($"https://localhost:7131/api/chat/{message.Id}", dto);
+
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine("Message edited successfully");
+                // Update the message in your local collection if needed
+                StateHasChanged();
+            }
+            else
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"Edit failed: {error}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error editing message: {ex.Message}");
+        }
+    }
+
+    private async Task ToggleApproval(ChatMessage message)
+    {
+        if (message.Id <= 0)
+        {
+            Console.WriteLine("Invalid message ID for approval");
+            return;
+        }
+
+        try
+        {
+            var token = await localStorage.GetItemAsync<string>("authToken") ;
+            Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            var dto = new ApproveMessageDto { IsApproved = !message.IsApproved };
+            var request = new HttpRequestMessage(HttpMethod.Patch, $"https://localhost:7131/api/chat/{message.Id}/approve")
+                {
+                    Content = JsonContent.Create(dto)
+                };
+
+            var response = await Http.SendAsync(request);
+            if (response.IsSuccessStatusCode)
+            {
+                message.IsApproved = dto.IsApproved;
+                Console.WriteLine($"Message approval toggled to: {message.IsApproved}");
+                StateHasChanged();
+            }
+            else
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"Approval failed: {error}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error toggling approval: {ex.Message}");
+        }
+    }
+
+    private async Task DeleteMessage(ChatMessage message)
+    {
+        if (message.Id <= 0)
+        {
+            Console.WriteLine("Invalid message ID for deletion");
+            return;
+        }
+
+        try
+        {
+            var token = await localStorage.GetItemAsync<string>("authToken");
+
+            Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            var response = await Http.DeleteAsync($"https://localhost:7131/api/chat/{message.Id}");
+            if (response.IsSuccessStatusCode)
+            {
+                message.IsDeleted = true;
+                Messages.Remove(message);
+                Console.WriteLine("Message deleted successfully");
+                StateHasChanged();
+            }
+            else
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"Delete failed: {error}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error deleting message: {ex.Message}");
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JS.InvokeVoidAsync("scrollToBottom", "chatMessages");
+    }
+
+    private void EnableEdit(ChatMessage message)
+    {
+        message.IsEditing = true;
+    }
+
+    private async Task SaveEdit(ChatMessage message)
+    {
+        message.IsEditing = false;
+        await EditMessage(message); // Reuse your existing method
+    }
+
+    private void CancelEdit(ChatMessage message)
+    {
+        message.IsEditing = false;
+        // Optionally reload from history if needed
     }
 }

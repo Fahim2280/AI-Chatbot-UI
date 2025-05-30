@@ -1,0 +1,86 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f3f4f6;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    color: #2c3e50;
+}
+
+.form-wrapper {
+    max-width: 400px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+    .input:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+.btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    .btn:hover {
+        background-color: #218838;
+    }
+
+.text-red-500 {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-visibility {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
