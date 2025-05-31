@@ -9,12 +9,21 @@
     flex-direction: column;
 }
 
-    .chat-box .messages-container {
-        overflow-y: auto;
-        max-height: 500px;
-        margin-bottom: 1rem;
-        padding-right: 0.5rem;
-    }
+.chat-box .messages-container {
+   overflow-y: auto;
+   max-height: 500px;
+   margin-bottom: 1rem;
+   padding-right: 0.5rem;
+}
+
+.message-text {
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin: 0.25rem 0;
+    white-space: pre-wrap;
+}
+
 
 .message {
     margin-bottom: 1rem;

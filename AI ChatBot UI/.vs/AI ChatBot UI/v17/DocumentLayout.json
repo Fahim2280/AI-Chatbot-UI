@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{E3D5BFE2-040B-412C-8AFE-538B35611614}|AI ChatBot UI.csproj|solutionrelative:components\\pages\\chat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E3D5BFE2-040B-412C-8AFE-538B35611614}|AI ChatBot UI.csproj|d:\\github\\ai-chatbot-ui\\ai chatbot ui\\wwwroot\\css\\chat.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E3D5BFE2-040B-412C-8AFE-538B35611614}|AI ChatBot UI.csproj|solutionrelative:wwwroot\\css\\chat.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E3D5BFE2-040B-412C-8AFE-538B35611614}|AI ChatBot UI.csproj|d:\\github\\ai-chatbot-ui\\ai chatbot ui\\dtos\\chatmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E3D5BFE2-040B-412C-8AFE-538B35611614}|AI ChatBot UI.csproj|solutionrelative:dtos\\chatmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E3D5BFE2-040B-412C-8AFE-538B35611614}|AI ChatBot UI.csproj|d:\\github\\ai-chatbot-ui\\ai chatbot ui\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E3D5BFE2-040B-412C-8AFE-538B35611614}|AI ChatBot UI.csproj|solutionrelative:components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3D5BFE2-040B-412C-8AFE-538B35611614}|AI ChatBot UI.csproj|d:\\github\\ai-chatbot-ui\\ai chatbot ui\\wwwroot\\css\\chat.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E3D5BFE2-040B-412C-8AFE-538B35611614}|AI ChatBot UI.csproj|solutionrelative:wwwroot\\css\\chat.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E3D5BFE2-040B-412C-8AFE-538B35611614}|AI ChatBot UI.csproj|d:\\github\\ai-chatbot-ui\\ai chatbot ui\\components\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -106,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -126,19 +126,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EditMessageDto.cs",
-              "DocumentMoniker": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\DTOs\\EditMessageDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\EditMessageDto.cs",
-              "ToolTip": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\DTOs\\EditMessageDto.cs",
-              "RelativeToolTip": "DTOs\\EditMessageDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T13:33:00.479Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 17,
               "Title": "ApproveMessageDto.cs",
               "DocumentMoniker": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\DTOs\\ApproveMessageDto.cs",
@@ -147,8 +134,7 @@
               "RelativeToolTip": "DTOs\\ApproveMessageDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T13:32:15.581Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T13:32:15.581Z"
             },
             {
               "$type": "Document",
@@ -160,8 +146,7 @@
               "RelativeToolTip": "Components\\Pages\\Home.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T17:47:51.146Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-29T17:47:51.146Z"
             },
             {
               "$type": "Document",
@@ -173,8 +158,7 @@
               "RelativeToolTip": "Components\\Pages\\Register.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T17:51:43.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-29T17:51:43.764Z"
             },
             {
               "$type": "Document",
@@ -184,14 +168,14 @@
               "RelativeDocumentMoniker": "Components\\Pages\\Chat.razor",
               "ToolTip": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\Components\\Pages\\Chat.razor",
               "RelativeToolTip": "Components\\Pages\\Chat.razor",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-29T19:27:51.321Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "_Imports.razor",
               "DocumentMoniker": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\Components\\_Imports.razor",
               "RelativeDocumentMoniker": "Components\\_Imports.razor",
@@ -199,12 +183,11 @@
               "RelativeToolTip": "Components\\_Imports.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T20:18:51.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-29T20:18:51.134Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ChatMessageDto.cs",
               "DocumentMoniker": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\DTOs\\ChatMessageDto.cs",
               "RelativeDocumentMoniker": "DTOs\\ChatMessageDto.cs",
@@ -212,12 +195,11 @@
               "RelativeToolTip": "DTOs\\ChatMessageDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T16:00:26.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T16:00:26.391Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ChatMessage.cs",
               "DocumentMoniker": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\DTOs\\ChatMessage.cs",
               "RelativeDocumentMoniker": "DTOs\\ChatMessage.cs",
@@ -225,8 +207,32 @@
               "RelativeToolTip": "DTOs\\ChatMessage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T19:32:29.693Z",
+              "WhenOpened": "2025-05-29T19:32:29.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "chat.css",
+              "DocumentMoniker": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\chat.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\chat.css",
+              "ToolTip": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\chat.css",
+              "RelativeToolTip": "wwwroot\\css\\chat.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-30T19:55:02.84Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EditMessageDto.cs",
+              "DocumentMoniker": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\DTOs\\EditMessageDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\EditMessageDto.cs",
+              "ToolTip": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\DTOs\\EditMessageDto.cs",
+              "RelativeToolTip": "DTOs\\EditMessageDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T13:33:00.479Z"
             },
             {
               "$type": "Document",
@@ -250,12 +256,11 @@
               "RelativeToolTip": "Components\\Pages\\Login.razor",
               "ViewState": "AgIAAEUAAAAAAAAAAAAAAE8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T17:53:07.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-29T17:53:07.73Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "site.js",
               "DocumentMoniker": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
@@ -263,8 +268,7 @@
               "RelativeToolTip": "wwwroot\\js\\site.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-05-30T20:08:43.297Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T20:08:43.297Z"
             },
             {
               "$type": "Document",
@@ -276,21 +280,7 @@
               "RelativeToolTip": "Components\\Layout\\MainLayout.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-30T19:19:43.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "chat.css",
-              "DocumentMoniker": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\chat.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\chat.css",
-              "ToolTip": "D:\\GitHub\\AI-Chatbot-UI\\AI ChatBot UI\\wwwroot\\css\\chat.css",
-              "RelativeToolTip": "wwwroot\\css\\chat.css",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAswEgAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-30T19:55:02.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T19:19:43.026Z"
             },
             {
               "$type": "Document",
@@ -302,8 +292,7 @@
               "RelativeToolTip": "wwwroot\\css\\register.css",
               "ViewState": "AgIAAD0AAAAAAAAAAAAwwFYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-30T19:34:59.885Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T19:34:59.885Z"
             },
             {
               "$type": "Document",
@@ -315,8 +304,7 @@
               "RelativeToolTip": "wwwroot\\css\\Login.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-30T19:28:31.029Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T19:28:31.029Z"
             },
             {
               "$type": "Document",
@@ -328,8 +316,7 @@
               "RelativeToolTip": "Components\\Layout\\NavMenu.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-30T19:19:44.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T19:19:44.358Z"
             },
             {
               "$type": "Document",
@@ -341,8 +328,7 @@
               "RelativeToolTip": "wwwroot\\css\\site.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-30T19:24:31.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T19:24:31.342Z"
             },
             {
               "$type": "Document",
@@ -354,8 +340,7 @@
               "RelativeToolTip": "Components\\Routes.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T20:19:10.551Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-29T20:19:10.551Z"
             },
             {
               "$type": "Document",
@@ -367,8 +352,7 @@
               "RelativeToolTip": "DTOs\\ChatResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T19:30:25.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-29T19:30:25.698Z"
             },
             {
               "$type": "Document",
